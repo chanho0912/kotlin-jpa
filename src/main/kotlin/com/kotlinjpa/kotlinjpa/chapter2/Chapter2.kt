@@ -1,18 +1,12 @@
-package com.kotlinjpa.kotlinjpa.chapter1
+package com.kotlinjpa.kotlinjpa.chapter2
 
 import com.kotlinjpa.kotlinjpa.chapter1.domain.User
 import jakarta.persistence.EntityManager
 import jakarta.persistence.EntityManagerFactory
 import jakarta.persistence.EntityTransaction
 import jakarta.persistence.Persistence
-import java.time.LocalDateTime
 
-
-//@SpringBootApplication
-//class KotlinJpaApplication
-
-fun main(args: Array<String>) {
-//    runApplication<KotlinJpaApplication>(*args)
+fun main() {
     val entityManagerFactory: EntityManagerFactory =
         Persistence.createEntityManagerFactory("chanho")
 
@@ -21,15 +15,14 @@ fun main(args: Array<String>) {
 
     try {
         transaction.begin()
-        val user = User(
-            email = "user@user.com",
-            name = "user",
-            createDate = LocalDateTime.now()
-        )
+//        val user = User(
+//            email = "user@user.com",
+//            name = "user",
+//            createDate = LocalDateTime.now()
+//        )
 
-        entityManager.persist(user)
-//        val userFromDB = entityManager.find(User::class.java, "user@user.com")
-//        userFromDB.name = "da"
+        val userFromDB = entityManager.find(User::class.java, "user@user.com")
+        userFromDB.name = "da"
         transaction.commit()
     } catch (ex: Exception) {
         ex.printStackTrace()
