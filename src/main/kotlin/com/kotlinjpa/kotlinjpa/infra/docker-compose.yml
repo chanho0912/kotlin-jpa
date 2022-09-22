@@ -15,3 +15,6 @@ services:
       TZ: Asia/Seoul
 #    volumes:
 #      - ./db/mysql/data:/var/lib/mysql # 디렉토리 마운트 설정
+
+
+# docker-compose up -d

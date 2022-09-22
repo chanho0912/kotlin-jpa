@@ -17,3 +17,6 @@ create table jpabegin.user
     name        varchar(50),
     create_date datetime
 ) engine innodb character set utf8mb4;
+
+
+-- docker exec -it mysql8 bash
