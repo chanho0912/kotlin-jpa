@@ -8,6 +8,7 @@
 
     <persistence-unit name="chanho" transaction-type="RESOURCE_LOCAL">
         <class>com.kotlinjpa.kotlinjpa.chapter1.domain.User</class>
+        <class>com.kotlinjpa.kotlinjpa.chapter5.reserve.domain.Review</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
